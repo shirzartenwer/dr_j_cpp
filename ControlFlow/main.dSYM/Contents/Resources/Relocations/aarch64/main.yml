@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     main
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003CA8, symSize: 0x100 }
+  - { offset: 0x3C22, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB8ne190107IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x12C, symBinAddr: 0x100003DD4, symSize: 0x54 }
+  - { offset: 0x3C62, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB8ne190107INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x200, symBinAddr: 0x100003EA8, symSize: 0x2C }
+  - { offset: 0x5019, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003CA8, symSize: 0x100 }
+  - { offset: 0x5189, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB8ne190107EPFRS3_S4_E, symObjAddr: 0x100, symBinAddr: 0x100003DA8, symSize: 0x2C }
+  - { offset: 0x51BB, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB8ne190107Ec, symObjAddr: 0x180, symBinAddr: 0x100003E28, symSize: 0x80 }
+  - { offset: 0x5230, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB8ne190107Ec, symObjAddr: 0x22C, symBinAddr: 0x100003ED4, symSize: 0x34 }
+...

@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-int main() {
+int main(){
 
     char singelChar = 'a';
     string myName = "lion";
@@ -11,5 +11,4 @@ int main() {
     cout << singelChar << endl;
 
     return 0; 
-
 }
