@@ -113,5 +113,41 @@ int main(){
     cout << "New front is: " << anotherVec.front() << endl;
     cout << "New back is: " << anotherVec.back() << endl;
 
+
+
+    /* 2D array*/
+
+    int myNums[2][3]{
+        {1, 2, 3},
+        {4, 5, 6}
+    }; // 2D array
+
+    cout << myNums[0][1] << endl;
+
+    cout << endl;
+    cout << endl;
+
+    for (int i = 1; i>=0; i--){
+        for (int j=2; j>=0; j--){
+            cout << myNums[i][j] << endl;
+        }
+        cout << endl;
+    }
+
+
+    array<int, 5>newInputArray;
+
+    for (int i; i<newInputArray.size(); i++){
+        cout << "Please enter an integer: ";
+        cin >> newInputArray[i];
+        cout << endl;
+    }
+
+    for (int num: newInputArray){
+        cout << (2 * num) << endl;
+    }
+
+
+
     return 0;
 }

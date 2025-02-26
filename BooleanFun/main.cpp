@@ -76,9 +76,11 @@ int main(){
 
     cout << "Lunch is expected to cost " << lunchMoney << endl;
 
-    // CRITICAL: Clear the input buffer before taking the next input
+    // CRITICAL: Clear the `/n` new line character, because there is getline() called later which will take later input
+    // As long as there are further input that needs to be taken in, then the previous input's leftover needs to be delt with by 
+    // taking it in, or ignore it.
     // cin.ignore(); 
-    cin.get();  // cin.ignore(); aslo works
+    //cin.get();  // cin.ignore(); aslo works
 
 
     string fullName;

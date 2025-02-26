@@ -6,71 +6,71 @@ using namespace std;
 
 int main () {
 
-    // int age = 15;
+    int age = 15;
 
-    // if (age > 16) {
-    //     cout << "You can drive. " << endl;
-    // } else {
-    //     cout << "You cannot drive." << endl;
-    // }
+    if (age > 16) {
+        cout << "You can drive. " << endl;
+    } else {
+        cout << "You cannot drive." << endl;
+    }
 
 
-    // char grade;
-    // cout << "Please enter a letter grade:" <<endl;
-    // cin >> grade;
+    char grade;
+    cout << "Please enter a letter grade:" <<endl;
+    cin >> grade;
 
-    // switch (grade){
-    //     case 'A':
-    //     case 'a':
-    //         cout << "Congrats"<< endl;
-    //         break;
-    //     case 'B':
-    //     case 'b':
-    //         cout << "Keep working." << endl;
-    //         break;
-    //     default:
-    //         cout << "Please only enter A or B" << endl;
-    // }
+    switch (grade){
+        case 'A':
+        case 'a':
+            cout << "Congrats"<< endl;
+            break;
+        case 'B':
+        case 'b':
+            cout << "Keep working." << endl;
+            break;
+        default:
+            cout << "Please only enter A or B" << endl;
+    }
 
-    // int count = 0;
-    // while (count < 5) {
-    //     cout << count << endl;
-    //     count++;
-    // }
+    int count = 0;
+    while (count < 5) {
+        cout << count << endl;
+        count++;
+    }
 
-    // cout<< endl << endl;
+    cout<< endl << endl;
 
     // Notice how this do-while loop will execute once regardless of the condition
-    // int count2 = 5;
-    // do {
-    //     cout<< count2 << endl;
-    //     count2++;
-    // } while (count2<5);
+    int count2 = 5;
+    do {
+        cout<< count2 << endl;
+        count2++;
+    } while (count2<5);
 
 
 
     // priming read;
-    // int input;
-    // cout << "Please enter a non-negative integer to conitnue ";
-    // cout << "or negative if you want to quit." << endl;
+    int input;
+    cout << "Please enter a non-negative integer to conitnue ";
+    cout << "or negative if you want to quit." << endl;
 
-    // cin >> input;
+    cin >> input;
 
-    // // Notice the garbage value you will encounter here, by initating an int without giving it anything.
-    // int total = 0; 
-    // cout <<"total is" << total << endl;
+    // Notice the garbage value you will encounter here, by initating an int without giving it anything.
+    int total = 0; 
+    cout <<"total is" << total << endl;
 
-    // while (input >=0) {
-    //     total += input;
+    while (input >=0) {
+        total += input;
         
-    //     cout << "Please enter a non-negative integer to conitnue ";
-    //     cout << "or negative if you want to quit." << endl;
+        cout << "Please enter a non-negative integer to conitnue ";
+        cout << "or negative if you want to quit." << endl;
     
-    //     cin >> input;
+        cin >> input;
 
-    // }
+    }
 
-    // cout << "Total is" << total << endl;
+    cout << "Total is" << total << endl;
 
 
 
@@ -106,6 +106,9 @@ int main () {
         }
     }
 
+
+    /* Parallel vectors */
+    
     return 0;
 
 }
