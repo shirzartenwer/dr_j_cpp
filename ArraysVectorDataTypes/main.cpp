@@ -147,27 +147,27 @@ int main(){
         cout << (2 * num) << endl;
     }
 
-    // // weight tracking
-    // vector<double> weightTracker(5);
-    // vector<string> name(5);
+    // weight tracking
+    vector<double> weightTracker(5);
+    vector<string> name(5);
 
-    // for (int i=0; i<weightTracker.size(); i++){
-    //     cout << "Please enter your name: ";
-    //     cin >> name[i];
-    //     cout << "Please enter your weight: ";
-    //     cin >> weightTracker[i];
-    //     cout << endl;
-    // }
+    for (int i=0; i<weightTracker.size(); i++){
+        cout << "Please enter your name: ";
+        cin >> name[i];
+        cout << "Please enter your weight: ";
+        cin >> weightTracker[i];
+        cout << endl;
+    }
 
-    // for (int i=0; i <weightTracker.size(); i++) {
-    //     cout << name[i] << " weighs " << weightTracker[i] << " pounds." << endl;
+    for (int i=0; i <weightTracker.size(); i++) {
+        cout << name[i] << " weighs " << weightTracker[i] << " pounds." << endl;
     // }
 
     // alternative of weight tracking
 
     const int VECTOR_SIZE = 5;
-    vector<string> names2(VECTOR_SIZE);
-    vector<double> weights2(VECTOR_SIZE);
+    vector<string> names2;
+    vector<double> weights2;
     string tempName;
     double tempWeight;
 
@@ -183,7 +183,7 @@ int main(){
     
 
     for (int i=0; i <VECTOR_SIZE; i++) {
-        cout << names2[i] << " weighs " << weights2[i] << " pounds." << endl;
+        cout << names2[i] << " weighs " << weights2[i] << " kgs." << endl;
     }
 
     return 0;

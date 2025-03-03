@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+# Debug files
+*.dSYM/
+*.pdb
+
+# IDE specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# Other
+*.log
+*.tmp

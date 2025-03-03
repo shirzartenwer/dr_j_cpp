@@ -13,5 +13,5 @@
     "extensions": [
         "ms-vscode.cpptools"
     ],
-    "postCreateCommand": "cmake ."
+    "postCreateCommand": "cmake . && echo 'CMake configuration complete' && ls -la"
 }
