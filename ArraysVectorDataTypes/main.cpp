@@ -11,8 +11,19 @@ int main(){
     // Can't obtain it in runtime, such as user entering a number.
     const int ARRAY_SIZE = 5;
     // This is declaring built-in arrays
-    int my_array[ARRAY_SIZE];
+    int my_array[ARRAY_SIZE]; // This allocate to stack
     string names[]{"Dogs", "Cats", "Mice", "Elephant", "Eagle"};
+
+    // This is allocaiting to the heap
+    int* myArr;
+    myArr = new int[5];
+    delete[] myArr; // always call delete after this is not nedded anymore
+
+    string* myString = new string("test");
+    delete myString;
+    
+    string* myStringArr = new string[5];
+    delete[] myStringArr;
 
     for (int i =0; i<=4; i++){
         my_array[i] = rand() % 10;
@@ -113,6 +124,13 @@ int main(){
     cout << "New front is: " << anotherVec.front() << endl;
     cout << "New back is: " << anotherVec.back() << endl;
 
+    vector<int> myNumbers;
+    cout << "Creating new vector myNumbers. \ncapacity=" << myNumbers.capacity();
+    for (int i = 0; i < 3; i++) {
+        myNumbers.push_back(i);
+    }
+    cout << "\ncapacity=" << myNumbers.capacity();
+
 
 
     /* 2D array*/
@@ -161,7 +179,7 @@ int main(){
 
     for (int i=0; i <weightTracker.size(); i++) {
         cout << name[i] << " weighs " << weightTracker[i] << " pounds." << endl;
-    // }
+    }
 
     // alternative of weight tracking
 
@@ -187,4 +205,4 @@ int main(){
     }
 
     return 0;
-}
+};

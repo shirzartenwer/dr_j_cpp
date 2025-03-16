@@ -4,6 +4,7 @@ using namespace std;
 
 
 int getResult (int num1, int num2);
+int factorial(int num);
 string getResult(string str1, string str2);
 
 int main() {
@@ -14,6 +15,9 @@ int main() {
     //These code works and leads to ultimate confusion 
 
     cout << log2(512) << endl;
+
+    cout << factorial(6)<< endl;
+
     return 0;
 }
 
@@ -23,4 +27,13 @@ int getResult (int num1, int num2) {
 
 string getResult(string str1, string str2){
     return str1 + " " + str2;
+}
+
+int factorial(int num){
+    if (num > 1) {
+        return num * (num -1);
+    } else {
+        return 1;
+    }
+
 }
