@@ -1,4 +1,5 @@
 #include <iostream>
+#include <array>
 using namespace std;
 
 void callMyName();
@@ -7,7 +8,9 @@ int addTwoNumbers(int a, int b);
 void changeNumeReal(int& someNum);
 void someFunctionScope(int firstNum);
 void modifyGlobal();
-
+int sumArray(int array[], int b);
+int sumArray(array<double, 3> doubleArray);
+void sumArray(array<double, 3> doubleArray, int& sum_num);
 // since this variable is defined outside main, it's accessible everywhere in this file
 double globalDouble = 1.41421;
 int counter = 0;
@@ -27,10 +30,11 @@ int main() {
 
     int myNum = 10;
     changeNumeReal(myNum);
-    // cout << "my num is: " << myNum << endl;
+    // notice how the number changed after the function call
+    cout << "my num is: " << myNum << endl;
 
     // someFunctionScope(1);
-    // someFunctionScope(2);
+    // someFunctionScope(1);
     // someFunctionScope(3);
 
     cout << "Value of counter before for loop: " << counter << endl;
@@ -38,6 +42,18 @@ int main() {
         modifyGlobal();
     }
     cout << "Value of counter after for loop: " << counter << endl;
+
+
+    int myArray[5]{0, 1, 2, 3, 4};
+    cout << "Sum of the array is " << sumArray(myArray, 5) << endl;
+
+    array<double, 3>myDoubleArray{1.1, 2.2, 3.3};
+    cout << "Sum of the double array is " << sumArray(myDoubleArray) << endl;
+
+    int sum_num = 0;
+    sumArray(myDoubleArray, sum_num);
+    // notice how this sumArray function doesn't have return value and if you put it in cout, it will result in nullptr error
+    cout << "Sum of the double array, passing by reference is " << sum_num  << endl;
 
     return 0;
 }
@@ -79,8 +95,32 @@ void someFunctionScope(int firstNum) {
     // called severl times in the program. But the inside num is always destroyed 
     // immediately after each function call.
 
+
 }
 
 void modifyGlobal(){
     counter++;
+}
+
+int sumArray(int array[], int array_size){
+    int sum = 0;
+    for (int i=0; i<array_size; i++){
+        sum = sum + array[i];
+    }
+
+    return sum;
+}
+
+// notice how this return type int, chunks up a double to become int, even if the returned variable sum was double
+int sumArray(array<double, 3>doubleArray){
+    double sum = 0;
+    for (double num: doubleArray){
+        sum += num;
+    }
+
+    return sum;
+}
+
+void sumArray(array<double, 3> doubleArray, int& sum_num){
+    sum_num = sumArray(doubleArray);
 }
