@@ -4,7 +4,8 @@
         "istream": "cpp",
         "array": "cpp",
         "typeinfo": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "tuple": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
