@@ -81,9 +81,18 @@ tuple<string, int, int>getAndVerifyUserInput(bool xTurn, array<array<string, 3>,
     // The edge cases of entered number out of range needs to be handeled. 
     cout << "Please give the row number of your piece. It should be a number between 1 and 3: " << endl;
     cin >> tempRow;
+    cout << endl;
+    if (tempRow>3 || tempRow <1){
+        cout <<"The number you entered is not valid. Please enter a number between 1 and 3. Please start again" << endl;
+        return getAndVerifyUserInput(xTurn, gameBoard);
+    }
     cout << "Please give the column number of your piece. It should be a number between 1 and 3: " << endl;
     cin >> tempCol;
     cout << endl;
+    if (tempCol>3 || tempCol <1){
+        cout <<"The number you entered is not valid. Please enter a number between 1 and 3. Please start again" << endl;
+        return getAndVerifyUserInput(xTurn, gameBoard);
+    }
 
 
     // validate if this space is empty for placing the piece 
