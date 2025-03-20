@@ -1,10 +1,15 @@
 #include "Book.h"
-
+#include <stdexcept>
 Book::Book(string author, string title, string genre, int numPages){
-    this->author = author;
-    this->title = title;
-    this->genre = genre;
-    this->numPages = numPages;
+    if (title != "Mein Kempf") {
+        this->author = author;
+        this->title = title;
+        this->genre = genre;
+        this->numPages = numPages;
+    } else {
+        throw runtime_error("This book is a prohibited book for reading. And yes, censorship happens in this small program as well.");
+    }
+
 
 };
 
