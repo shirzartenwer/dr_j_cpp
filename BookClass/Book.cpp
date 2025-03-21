@@ -13,7 +13,8 @@ Book::Book(string author, string title, string genre, int numPages){
 
 };
 
-string Book::getAuthor() const {
+// noexcept is an optional parameter to indicate this will not throw any exception
+string Book::getAuthor() const noexcept {
     return author;
 };
 
