@@ -13,7 +13,7 @@ int main()
     cout << "pointer dereferenced " << *somePtr << endl;
 
     *somePtr = 200;
-    // The result of this line is the msot confusing one
+    // The result of this line is the most confusing one
     cout <<"someInt is now: " << someInt << endl;
 
     double myDouble = 1.414;
@@ -49,7 +49,29 @@ int main()
     cout <<"The value that bool pointer points to is " << boolalpha << *myBoolPtr << endl;
 
     delete myBoolPtr;
-    myBoolPtr = nullptr;
+    // myBoolPtr = nullptr;
+
+    if (myBoolPtr) {
+        cout << "exists" << endl;
+    } else {
+        cout << "doenst exist" << endl;
+    }
+    cout << *myBoolPtr << endl;
+
+
+    // ######### INT
+    myIntPtr = new int(0); // heap allocation
+    cout <<"The value of int that pointer points to is " << *myIntPtr << endl;
+
+    delete myIntPtr;
+    myIntPtr = nullptr;
+
+    if (myIntPtr) {
+        cout << "exists" << endl;
+    } else {
+        cout << "doenst exist" << endl;
+    }
+    cout << *myIntPtr << endl;
 
     return 0;
 
