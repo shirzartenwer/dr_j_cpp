@@ -5,7 +5,7 @@ using namespace std;
 int main (){
     const int ARRAY_SIZE = 5;
     int array[ARRAY_SIZE];
-
+    // statics array of dynamic pointers
     Rectangle* rectPtr[ARRAY_SIZE];
 
     rectPtr[0] = new Rectangle(5, 6);
