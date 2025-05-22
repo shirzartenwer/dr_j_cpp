@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include "Dog.h"
+#include "Cat.h"
 
 // NOTE: inheritence in theory also works as one children having multiple parents
 
@@ -37,7 +38,22 @@ int main() {
     delete dogPtr;
     dogPtr = nullptr;
 
-    // Static (Early) binding VS late binding
+
+
+    Animal* catPtr = new Cat("Tracy", 3.4);
+
+    cout << "How does cat sound? :" << catPtr->makeNoise() << endl;
+    // pointer casting needed when using parent class pointer to call methods 
+    // that only exists in children class
+    // this casting is only effective in this line, it doesn't permenantly change it to cat pointer
+    ((Cat*)catPtr)->chaseMouse();
+
+    // a newer way to cast pointer
+    (reinterpret_cast<Cat*>(catPtr))->chaseMouse();
+
+    delete catPtr;
+    catPtr = nullptr;
+
 
     return 0;
 }
