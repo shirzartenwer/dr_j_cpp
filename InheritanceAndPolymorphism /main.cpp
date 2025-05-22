@@ -6,7 +6,10 @@
 // NOTE: inheritence in theory also works as one children having multiple parents
 
 int main() {
-    Animal myAnimal("Pet", 40);
+
+    // since Animal is now an abstrac class that has pure virtual binding, it's now allowed 
+    // to have an instance of abstract class
+    // Animal myAnimal("Pet", 40);
     Dog dog("Leo", 80, "Huskey");
 
     // Since Dog is Animal, we can use an Animal poitner pointing to the Dog instance
@@ -15,8 +18,8 @@ int main() {
 
     cout <<"Make noises ? " << dogPtr->makeNoise() << endl;
      
-    cout <<"Animal name is: "<< myAnimal.getName() << endl;
-    cout <<"Animal weight is: "<< myAnimal.getWeight() << endl;
+    // cout <<"Animal name is: "<< myAnimal.getName() << endl;
+    // cout <<"Animal weight is: "<< myAnimal.getWeight() << endl;
      
 
     // children instance can access parent's class's public method
@@ -25,9 +28,11 @@ int main() {
     dog.digHole(); 
 
     // comparison of methods with same name in parent and child class
-    cout <<"Animal noise is: " << myAnimal.makeNoise() << endl;
+    // cout <<"Animal noise is: " << myAnimal.makeNoise() << endl;
     cout << "Dog's noise: " << dog.makeNoise() << endl;
     dog.chaseCat();
+
+    cout << "What does dog eat: " << dogPtr->eat() << endl;
 
     delete dogPtr;
     dogPtr = nullptr;

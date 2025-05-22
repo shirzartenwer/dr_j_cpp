@@ -19,6 +19,7 @@ class Dog:public Animal
         // overiding is only for class inheritence
         string makeNoise() const;
         void chaseCat() const;
+        string eat() const;
 
     private:
         string breed;
