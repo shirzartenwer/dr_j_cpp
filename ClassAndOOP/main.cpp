@@ -15,6 +15,7 @@ int main () {
     int theirWnum = 10;
     string theriWcolor = "grey";
     House theirHouse(theirHnum, theirWnum, theriWcolor);
+    // so don't use pass by reference for constructing a class object, but use it for functionsw
 
 
     myHouse.printData();
