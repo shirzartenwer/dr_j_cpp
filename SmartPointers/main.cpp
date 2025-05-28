@@ -39,5 +39,5 @@ int main() {
     // but you can move the pointer 
     unique_ptr<double>newPtr = move(myDubPtr);
 
-    cout << "New pointer is pointing to" <<  *newPtr << endl;
+    cout << "New pointer is pointing to CPPcpp" <<  *newPtr << endl;
 }

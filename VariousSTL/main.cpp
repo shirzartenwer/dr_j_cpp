@@ -12,7 +12,6 @@ void fillVector(vector<int>& myVector);
 void printVector(const vector<int>& myVector);
 void countFives(const vector<int>& myVector);
 
-
 int main(){
 
     map<string, string> contacts;
